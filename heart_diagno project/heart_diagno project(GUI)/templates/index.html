@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تشخيص أمراض القلب</title>
+</head>
+<body>
+    <h2>نموذج تشخيص أمراض القلب</h2>
+    <form action="/predict" method="post">
+        العمر: <input type="text" name="age"><br>
+        ضغط الدم: <input type="text" name="trestbps"><br>
+        الكولسترول: <input type="text" name="chol"><br>
+        السكر الصائم > 120؟ (1/0): <input type="text" name="fbs"><br>
+        الحد الأقصى لمعدل النبض: <input type="text" name="thalach"><br>
+        إجهاد: <input type="text" name="exang"><br>
+        oldpeak: <input type="text" name="oldpeak"><br>
+        الجنس (1 ذكر - 0 أنثى): <input type="text" name="sex"><br>
+        البلد: <input type="text" name="dataset_num"><br>
+        نوع الألم الصدري: <input type="text" name="cp"><br>
+        رسم القلب: <input type="text" name="restecg"><br>
+        الانحدار: <input type="text" name="slope"><br>
+        <input type="submit" value="تشخيص">
+    </form>
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
